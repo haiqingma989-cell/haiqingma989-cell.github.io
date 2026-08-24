@@ -3,44 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Haiqing Ma</title>
+
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      max-width: 720px;
-      margin: 70px auto;
+      max-width: 760px;
+      margin: 64px auto;
       padding: 0 24px;
-      line-height: 1.65;
+      line-height: 1.68;
       color: #222;
       background-color: #ffffff;
     }
 
     h1 {
-      font-size: 34px;
-      margin-bottom: 8px;
-      border-bottom: 1px solid #ddd;
+      font-size: 36px;
+      margin-bottom: 6px;
       padding-bottom: 10px;
+      border-bottom: 1px solid #d8d8d8;
     }
 
     h2 {
-      margin-top: 32px;
+      margin-top: 34px;
+      margin-bottom: 12px;
       font-size: 22px;
-      border-bottom: 1px solid #eee;
       padding-bottom: 6px;
+      border-bottom: 1px solid #eeeeee;
     }
 
     p {
       font-size: 16px;
+      margin: 10px 0;
+    }
+
+    a {
+      color: #1f5f99;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .subtitle {
+      margin-top: 4px;
+      color: #555;
+      font-size: 17px;
     }
 
     .contact {
-      margin-top: 12px;
+      margin-top: 16px;
       color: #333;
     }
 
-    .note {
+    .research-item {
+      margin-top: 18px;
+    }
+
+    .research-title {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .research-meta {
       color: #666;
-      font-size: 15px;
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    .note {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid #eeeeee;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        margin: 36px auto;
+        padding: 0 18px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
@@ -49,33 +102,98 @@
 
   <h1>Haiqing Ma</h1>
 
+  <p class="subtitle">
+    Undergraduate Researcher · Harbin Institute of Technology
+  </p>
+
   <p>
-    I am an undergraduate student in Intelligent Sensing Engineering at
-    Harbin Institute of Technology.
+    I am an undergraduate student in
+    <strong>Intelligent Perception Engineering</strong>
+    at Harbin Institute of Technology, expected to graduate in June 2027.
+    My current research focuses on reinforcement learning and robust control
+    for physical robotic systems.
   </p>
 
   <p class="contact">
-    <strong>Email:</strong> 2023113484@stu.hit.edu.cn<br>
-    <strong>Institution:</strong> Harbin Institute of Technology
+    <strong>Email:</strong>
+    <a href="mailto:2023113484@stu.hit.edu.cn">
+      2023113484@stu.hit.edu.cn
+    </a>
+    <br>
+
+    <strong>Institution:</strong>
+    Harbin Institute of Technology
   </p>
+
 
   <h2>Research Interests</h2>
+
   <p>
-    My current research interests include light field camera calibration,
-    white image calibration, optical imaging, intelligent sensing, computer vision,
-    and machine learning for scientific and engineering problems.
+    Robot learning, reinforcement learning, robust and adaptive robot control,
+    fault tolerant locomotion, and simulation to hardware transfer.
   </p>
+
+  <p>
+    I am particularly interested in learning based methods that enable
+    physical robots to maintain reliable behavior under actuator degradation,
+    uncertain dynamics, and changing operating conditions.
+  </p>
+
+
+  <h2>Research</h2>
+
+  <div class="research-item">
+    <div class="research-title">
+      Gait Compensation Using Reinforcement Learning for a Hexapod Robot
+      with Partial Leg Degradation
+    </div>
+
+    <div class="research-meta">
+      First author · Manuscript in preparation
+    </div>
+
+    <p>
+      Developed a structured residual PPO approach for compensating partial
+      actuator degradation while preserving the original gait structure.
+      The learned controller adjusts a compact set of interpretable gait
+      parameters and is transferred from MuJoCo simulation to a physical
+      hexapod robot for hardware validation.
+    </p>
+  </div>
+
+
+  <h2>Current Research Direction</h2>
+
+  <p>
+    I am interested in extending my current work toward robust and adaptive
+    reinforcement learning for robots operating under changing dynamics.
+    In particular, I am interested in combining learned adaptation with
+    structured robot control, online system estimation, and physical
+    validation.
+  </p>
+
 
   <h2>Education</h2>
+
   <p>
     <strong>Harbin Institute of Technology</strong><br>
-    B.Eng. in Intelligent Sensing Engineering, 2023 – 2027.
+    B.Eng. in Intelligent Perception Engineering<br>
+    2023 – 2027
   </p>
 
-  <h2>Last Updated</h2>
-  <p class="note">
-    May 2026
+
+  <h2>Research Opportunities</h2>
+
+  <p>
+    I am currently interested in research opportunities related to robot
+    learning, reinforcement learning, robust robot control, and physical
+    robotic systems.
   </p>
+
+
+  <div class="footer">
+    Last updated: August 2026
+  </div>
 
 </body>
 </html>
