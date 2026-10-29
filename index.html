@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Haiqing Ma</title>
+  <meta name="description" content="Haiqing Ma — undergraduate researcher at Harbin Institute of Technology working on fault-tolerant legged locomotion, reinforcement learning, sim-to-real transfer, and computational imaging.">
 
   <style>
     body {
@@ -61,6 +62,10 @@
       margin-top: 18px;
     }
 
+    .research-item + .research-item {
+      margin-top: 26px;
+    }
+
     .research-title {
       font-weight: bold;
       font-size: 16px;
@@ -75,6 +80,15 @@
     .note {
       color: #777;
       font-size: 14px;
+    }
+
+    .compact-list {
+      margin: 8px 0;
+      padding-left: 22px;
+    }
+
+    .compact-list li {
+      margin: 6px 0;
     }
 
     .footer {
@@ -110,8 +124,8 @@
     I am an undergraduate student in
     <strong>Intelligent Perception Engineering</strong>
     at Harbin Institute of Technology, expected to graduate in June 2027.
-    My current research focuses on reinforcement learning and robust control
-    for physical robotic systems.
+    My research focuses on fault-tolerant legged locomotion, residual
+    reinforcement learning, sim-to-real transfer, and computational imaging.
   </p>
 
   <p class="contact">
@@ -123,20 +137,27 @@
 
     <strong>Institution:</strong>
     Harbin Institute of Technology
+    <br>
+
+    <strong>GitHub:</strong>
+    <a href="https://github.com/haiqingma989-cell">
+      github.com/haiqingma989-cell
+    </a>
   </p>
 
 
   <h2>Research Interests</h2>
 
   <p>
-    Robot learning, reinforcement learning, robust and adaptive robot control,
-    fault tolerant locomotion, and simulation to hardware transfer.
+    Fault-tolerant legged locomotion, reinforcement learning, robust and
+    adaptive robot control, sim-to-real transfer, and computational imaging.
   </p>
 
   <p>
-    I am particularly interested in learning based methods that enable
+    I am particularly interested in learning-based methods that enable
     physical robots to maintain reliable behavior under actuator degradation,
-    uncertain dynamics, and changing operating conditions.
+    uncertain dynamics, and changing operating conditions, while retaining
+    interpretable structure and measurable safety and reliability.
   </p>
 
 
@@ -144,20 +165,49 @@
 
   <div class="research-item">
     <div class="research-title">
-      Gait Compensation Using Reinforcement Learning for a Hexapod Robot
-      with Partial Leg Degradation
+      Residual RL Gait Compensation for a Hexapod with Partial Leg Degradation
     </div>
 
     <div class="research-meta">
-      First author · Manuscript in preparation
+      Mar 2026 – Present · First Author &amp; Project Lead · Advisor: Prof. Zhengang Lu<br>
+      Manuscript in preparation for submission to BIROB
     </div>
 
     <p>
-      Developed a structured residual PPO approach for compensating partial
-      actuator degradation while preserving the original gait structure.
-      The learned controller adjusts a compact set of interpretable gait
-      parameters and is transferred from MuJoCo simulation to a physical
-      hexapod robot for hardware validation.
+      Developed independent residual PPO controllers for tripod, tetrapod, and
+      wave gaits using six interpretable gait variables. Built a
+      MuJoCo-to-MiniHexa pipeline with a four-stage curriculum and transferred
+      the learned policies to 50-Hz hardware without retraining.
+    </p>
+
+    <p>
+      Across 45 hardware trials with the left-front leg limited to 20%
+      actuation, the learned compensation reduced mean final lateral deviation
+      from 23.0 cm to 7.2 cm. The curriculum-trained policy recovered in 13/15
+      trials, compared with 7/15 for direct training and 0/15 without training.
+    </p>
+  </div>
+
+  <div class="research-item">
+    <div class="research-title">
+      White-Image Calibration and Overlap-Aware Processing for a Light-Field Camera
+    </div>
+
+    <div class="research-meta">
+      Sep 2025 – Mar 2026 · Research Project
+    </div>
+
+    <p>
+      Implemented forward and inverse white-image calibration workflows,
+      including image acquisition, preprocessing, thresholding, contour
+      fitting, connected-component analysis, and Hough-circle detection for
+      low- and high-overlap microlens arrays.
+    </p>
+
+    <p>
+      Generated microlens-center arrays and evaluated localization methods by
+      accuracy, operating conditions, and failure modes to support downstream
+      sub-aperture extraction, defect detection, and 3D reconstruction.
     </p>
   </div>
 
@@ -165,11 +215,10 @@
   <h2>Current Research Direction</h2>
 
   <p>
-    I am interested in extending my current work toward robust and adaptive
-    reinforcement learning for robots operating under changing dynamics.
-    In particular, I am interested in combining learned adaptation with
-    structured robot control, online system estimation, and physical
-    validation.
+    I am interested in safe and fault-tolerant learning-based control for
+    legged and mobile robots. In particular, I hope to combine data-driven
+    adaptation with structured control, formal stability and safety analysis,
+    and rigorous validation on physical systems.
   </p>
 
 
@@ -177,22 +226,40 @@
 
   <p>
     <strong>Harbin Institute of Technology</strong><br>
-    B.Eng. in Intelligent Perception Engineering<br>
-    2023 – 2027
+    B.Eng. Candidate in Intelligent Perception Engineering<br>
+    Sep 2023 – Jun 2027 · Overall Average: 80.5/100 · Official GPA: 3.03/4.00
   </p>
+
+
+  <h2>Selected Honors</h2>
+
+  <ul class="compact-list">
+    <li>National Gold Award, China International College Students' Innovation Competition (2024)</li>
+    <li>National Second Prize, The 19th iCAN Innovation Contest Finals (China) (2025)</li>
+    <li>National Second Prize, 11th National College Students' Statistical Modeling Competition (2025)</li>
+    <li>Second Prize, 7th University Student Competition – Five Minute Research Presentation (5MRP) (2024)</li>
+  </ul>
+
+
+  <h2>Technical Skills</h2>
+
+  <p><strong>Programming:</strong> Python, C++, MATLAB</p>
+  <p><strong>Reinforcement Learning:</strong> PPO, residual RL, curriculum learning</p>
+  <p><strong>Robotics &amp; Simulation:</strong> MuJoCo, MiniHexa, sim-to-real transfer, AprilTag</p>
+  <p><strong>Methods:</strong> Gait control, image processing, camera calibration, data analysis</p>
 
 
   <h2>Research Opportunities</h2>
 
   <p>
-    I am currently interested in research opportunities related to robot
-    learning, reinforcement learning, robust robot control, and physical
-    robotic systems.
+    I am interested in PhD opportunities in robot learning, reinforcement
+    learning, fault-tolerant control, and physical robotic systems for Fall
+    2027.
   </p>
 
 
   <div class="footer">
-    Last updated: August 2026
+    Last updated: October 2026
   </div>
 
 </body>
