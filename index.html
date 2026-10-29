@@ -66,6 +66,23 @@
       margin-top: 26px;
     }
 
+    .demo {
+      margin: 16px 0 6px;
+    }
+
+    .demo video {
+      display: block;
+      width: 100%;
+      background: #000;
+      border-radius: 4px;
+    }
+
+    .demo figcaption {
+      margin-top: 6px;
+      color: #666;
+      font-size: 14px;
+    }
+
     .research-title {
       font-weight: bold;
       font-size: 16px;
@@ -122,10 +139,10 @@
 
   <p>
     I am an undergraduate student in
-    <strong>Intelligent Perception Engineering</strong>
+    <strong>Intelligent Sensing Engineering</strong>
     at Harbin Institute of Technology, expected to graduate in June 2027.
-    My research focuses on fault-tolerant legged locomotion, residual
-    reinforcement learning, sim-to-real transfer, and computational imaging.
+    My academic interests include robotics, reinforcement learning, and
+    computational imaging.
   </p>
 
   <p class="contact">
@@ -149,65 +166,104 @@
   <h2>Research Interests</h2>
 
   <p>
-    Fault-tolerant legged locomotion, reinforcement learning, robust and
-    adaptive robot control, sim-to-real transfer, and computational imaging.
+    Robotics, reinforcement learning, and computational imaging.
   </p>
 
   <p>
-    I am particularly interested in learning-based methods that enable
-    physical robots to maintain reliable behavior under actuator degradation,
-    uncertain dynamics, and changing operating conditions, while retaining
-    interpretable structure and measurable safety and reliability.
+    My current work spans fault-tolerant hexapod locomotion and light-field
+    computational imaging, with an emphasis on interpretable learning-based
+    control, hardware validation, and practical vision pipelines.
   </p>
+
+
+  <h2>Publications &amp; Manuscripts</h2>
+
+  <div class="research-item">
+    <div class="research-title">
+      H. Ma, H. Qin, Z. Lu, and J. Wang, “Gait Compensation Using Reinforcement
+      Learning for a Hexapod Robot with Partial Leg Degradation.”
+    </div>
+
+    <div class="research-meta">
+      Manuscript in preparation; intended for submission to
+      <em>Biomimetic Intelligence and Robotics</em> (BIROB)
+    </div>
+
+    <figure class="demo">
+      <video controls playsinline preload="metadata"
+             poster="assets/hexapod-gait-compensation-poster.jpg"
+             aria-label="Hexapod gait compensation supplementary demo">
+        <source src="assets/hexapod-gait-compensation-demo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+        <a href="assets/hexapod-gait-compensation-demo.mp4">Download the demo video.</a>
+      </video>
+      <figcaption>
+        Supplementary demo: curriculum training, direct PPO, and prior-only
+        comparisons across tripod, tetrapod, and wave gaits in simulation and
+        hardware experiments.
+      </figcaption>
+    </figure>
+  </div>
 
 
   <h2>Research</h2>
 
   <div class="research-item">
     <div class="research-title">
-      Residual RL Gait Compensation for a Hexapod with Partial Leg Degradation
+      Residual Reinforcement Learning for Hexapod Gait Compensation
     </div>
 
     <div class="research-meta">
-      Mar 2026 – Present · First Author &amp; Project Lead · Advisor: Prof. Zhengang Lu<br>
-      Manuscript in preparation for submission to BIROB
+      Mar 2026 – Present · First Author &amp; Project Lead · Advisor: Prof. Zhengang Lu
     </div>
 
     <p>
-      Developed independent residual PPO controllers for tripod, tetrapod, and
-      wave gaits using six interpretable gait variables. Built a
-      MuJoCo-to-MiniHexa pipeline with a four-stage curriculum and transferred
-      the learned policies to 50-Hz hardware without retraining.
+      Developed a structured residual reinforcement learning method for
+      partial leg actuation degradation. Separate PPO policies for tripod,
+      tetrapod, and wave gaits adjust six interpretable gait variables while
+      preserving the prescribed coordination among the legs.
     </p>
 
     <p>
-      Across 45 hardware trials with the left-front leg limited to 20%
-      actuation, the learned compensation reduced mean final lateral deviation
-      from 23.0 cm to 7.2 cm. The curriculum-trained policy recovered in 13/15
-      trials, compared with 7/15 for direct training and 0/15 without training.
+      Built a MuJoCo-to-MiniHexa training and deployment pipeline using staged
+      curriculum learning and fixed calibration for simulation-to-hardware
+      transfer. Compared curriculum training with direct PPO under the same
+      interaction budget.
+    </p>
+
+    <p>
+      Validated the method in 45 hardware trials under severe front-left-leg
+      degradation, reducing average terminal lateral deviation by 68.7%
+      across three gait patterns.
     </p>
   </div>
 
   <div class="research-item">
     <div class="research-title">
-      White-Image Calibration and Overlap-Aware Processing for a Light-Field Camera
+      White Image Calibration and Overlap Aware Processing for a Light Field Camera
     </div>
 
     <div class="research-meta">
-      Sep 2025 – Mar 2026 · Research Project
+      Sep 2025 – Present · Research Project
     </div>
 
     <p>
-      Implemented forward and inverse white-image calibration workflows,
-      including image acquisition, preprocessing, thresholding, contour
-      fitting, connected-component analysis, and Hough-circle detection for
-      low- and high-overlap microlens arrays.
+      Developed an overlap-aware white-image calibration pipeline for
+      microlens arrays, combining thresholding, watershed segmentation, and
+      Delaunay-based missing-center restoration.
     </p>
 
     <p>
-      Generated microlens-center arrays and evaluated localization methods by
-      accuracy, operating conditions, and failure modes to support downstream
-      sub-aperture extraction, defect detection, and 3D reconstruction.
+      Estimated microlens radii using midpoint gray-level scanning and
+      evaluated center and radius estimation over an overlap-ratio range of
+      0–30%.
+    </p>
+
+    <p>
+      Currently investigating EPI-based depth estimation and 3D
+      reconstruction, including multi-feature line-structure analysis,
+      sub-pixel disparity refinement, depth mapping, and point-cloud
+      reconstruction from light-field images.
     </p>
   </div>
 
@@ -215,46 +271,74 @@
   <h2>Current Research Direction</h2>
 
   <p>
-    I am interested in safe and fault-tolerant learning-based control for
-    legged and mobile robots. In particular, I hope to combine data-driven
-    adaptation with structured control, formal stability and safety analysis,
-    and rigorous validation on physical systems.
+    I am interested in further developing learning and vision methods for
+    robotics, including fault-tolerant control, simulation-to-hardware
+    transfer, light-field depth estimation, and 3D reconstruction.
   </p>
+
+
+  <h2>Additional Experience</h2>
+
+  <div class="research-item">
+    <div class="research-title">
+      Doubao Large Language Model (LLM) Data Annotation
+    </div>
+    <div class="research-meta">
+      Oct 2025 – Mar 2026 · Douyin–HIT Collaborative Project
+    </div>
+    <p>
+      Annotated and quality-checked model training data under standardized
+      specifications and documented ambiguous cases to maintain annotation
+      consistency.
+    </p>
+  </div>
 
 
   <h2>Education</h2>
 
   <p>
     <strong>Harbin Institute of Technology</strong><br>
-    B.Eng. Candidate in Intelligent Perception Engineering<br>
-    Sep 2023 – Jun 2027 · Overall Average: 80.5/100 · Official GPA: 3.03/4.00
+    B.Eng. in Intelligent Sensing Engineering<br>
+    Sep 2023 – Jun 2027 · Weighted Average Score: 80.5/100 · IELTS 6.5
+  </p>
+
+  <p>
+    <strong>Selected Coursework:</strong> Linear Algebra and Analytic Geometry D
+    (90.0/100), Intelligent Visual Technology (90.9/100), C++ Programming B
+    (87.0/100), and Electrotechnics A (88.2/100).
   </p>
 
 
   <h2>Selected Honors</h2>
 
   <ul class="compact-list">
-    <li>National Gold Award, China International College Students' Innovation Competition (2024)</li>
-    <li>National Second Prize, The 19th iCAN Innovation Contest Finals (China) (2025)</li>
-    <li>National Second Prize, 11th National College Students' Statistical Modeling Competition (2025)</li>
-    <li>Second Prize, 7th University Student Competition – Five Minute Research Presentation (5MRP) (2024)</li>
+    <li>Gold Award, China International College Students' Innovation Competition — Team Member (2024)</li>
+    <li>National Second Prize, The 19th iCAN Innovation Contest Finals (China) — Core Team Member (2025)</li>
+    <li>National Second Prize, 11th National College Students' Statistical Modeling Competition — Team Leader (2025)</li>
+    <li>National Second Prize, University Student Competition – Five Minute Research Presentation (2024)</li>
   </ul>
 
 
   <h2>Technical Skills</h2>
 
   <p><strong>Programming:</strong> Python, C++, MATLAB</p>
-  <p><strong>Reinforcement Learning:</strong> PPO, residual RL, curriculum learning</p>
-  <p><strong>Robotics &amp; Simulation:</strong> MuJoCo, MiniHexa, sim-to-real transfer, AprilTag</p>
-  <p><strong>Methods:</strong> Gait control, image processing, camera calibration, data analysis</p>
+  <p><strong>Machine Learning:</strong> RL, PPO, curriculum learning</p>
+  <p><strong>Robotics &amp; Simulation:</strong> MuJoCo, MiniHexa, AprilTag, inverse kinematics, simulation-to-hardware transfer</p>
+  <p><strong>Vision &amp; Imaging:</strong> Image processing, camera calibration, Hough-circle detection, connected-component analysis</p>
+  <p>
+    <strong>Software Registrations:</strong> SCp-WRPCA Based Defect Detection
+    Software for Orthogonal Square Grid Transparent Electromagnetic Shielding
+    Films (Reg. No. 2025SR1595008); Optimized WRPCA Based Defect Detection
+    Software for Orthogonal Circular Grid Transparent Electromagnetic
+    Shielding Films (Reg. No. 2025SR1594996).
+  </p>
 
 
   <h2>Research Opportunities</h2>
 
   <p>
-    I am interested in PhD opportunities in robot learning, reinforcement
-    learning, fault-tolerant control, and physical robotic systems for Fall
-    2027.
+    I am currently applying for Fall 2027 MS/PhD programs in robotics,
+    reinforcement learning, computational imaging, and related areas.
   </p>
 
 
